@@ -15,7 +15,8 @@ using ::testing::TestInfo;
 using ::testing::TestPartResult;
 using ::testing::UnitTest;
 
-TEST(sortList, success) {
+
+TEST(sortList, success) {/*{{{*/
     int num[10] = {6, 9, 7, 2, 10, 5, 1, 4, 8,3};
     struct ListNode* node = (struct ListNode*)malloc(sizeof(struct ListNode));
     assert(node != NULL);
@@ -26,15 +27,13 @@ TEST(sortList, success) {
     }
 
     node = sortList(node);
-
-    //sortListPartitionV1(node);
     for (int i = 1; i <= 10; i++) {
         ASSERT_EQ(i, node->val);
         node = node->next;
     }
-}
+}/*}}}*/
 
-TEST(sortListPartitioin, success) {
+TEST(sortListPartitioin, success) {/*{{{*/
     int num[10] = {6, 9, 7, 2, 10, 5, 1, 4, 8,3};
     struct ListNode* node = (struct ListNode*)malloc(sizeof(struct ListNode));
     assert(node != NULL);
@@ -49,7 +48,7 @@ TEST(sortListPartitioin, success) {
         ASSERT_EQ(i, node->val);
         node = node->next;
     }
-}
+}/*}}}*/
 
 
 
