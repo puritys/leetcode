@@ -7,8 +7,9 @@ int main () {
     head->val = 0;
     addTree(&head, nums, 10);
     //printTree(head);
-    //int depth = bfsAlgorithm(head);
+    int depth = bfsAlgorithm(head);
     int depth = dfsAlgorithm(head);
+    int depth = bfsQueueAlgorithm(head);
 
     printf("depth = %d", depth);
 }

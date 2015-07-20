@@ -7,31 +7,33 @@ struct queen {
     int depth;
 };
 
-bool addQueen(struct queen *queens, struct TreeNode *next, int depth) {
+bool addQueen(struct queen *queens, struct TreeNode *next, int depth) {/*{{{*/
     struct queen *tmp;
     struct queen *d = (struct queen*) malloc (sizeof(struct queen));
     d->depth = depth;
     d->node = next;
+    d->next = NULL;
     tmp = queens;
     while (tmp && tmp->next) {
         tmp = tmp->next;
     }
     tmp->next = d;
     return true;
-}
+}/*}}}*/
 
-struct TreeNode* getQueenFromTop(struct queen **queen, int *depth) {
+struct TreeNode* getQueenFromTop(struct queen **queen, int *depth) {/*{{{*/
     struct TreeNode *d;
-    if (!(*queen)->next) {return d;}
+    if (!(*queen) || !(*queen)->next) {return d;}
     d = (*queen)->next->node;
     *depth = (*queen)->next->depth;
     *queen = (*queen)->next;
     return d;
-}
+}/*}}}*/
 
 int bfsAlgorithm(struct TreeNode* root) {
     struct queen *queenHead;
     queenHead = (struct queen *) malloc (sizeof(struct queen));
+    queenHead->next = NULL;
     int depth = 1;
     if (!root) return 0;
     while (root) {
@@ -44,6 +46,7 @@ int bfsAlgorithm(struct TreeNode* root) {
         }
         root = getQueenFromTop(&queenHead, &depth);
     }
+    free(queenHead);
     return depth;
 }
 
