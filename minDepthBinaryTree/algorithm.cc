@@ -1,3 +1,4 @@
+/*  BFS  breadth first search */
 #include "algorithm.h"
 
 bool depthRecursive(struct TreeNode* node, int nowDepth, int *minDepth) {
