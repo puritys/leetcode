@@ -7,6 +7,8 @@ int main () {
     head->val = 0;
     addTree(&head, nums, 10);
     //printTree(head);
-    int depth = minDepth(head);
+    //int depth = bfsAlgorithm(head);
+    int depth = dfsAlgorithm(head);
+
     printf("depth = %d", depth);
 }
