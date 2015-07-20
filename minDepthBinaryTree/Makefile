@@ -1,4 +1,4 @@
-files= algorithm.cc ../core/tree.cc
+files= bfsAlgorithm.cc ../core/tree.cc
 
 all:
 	g++ -g main.cc $(files) && ./a.out
