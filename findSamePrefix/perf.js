@@ -28,3 +28,7 @@ smartPerf.end(true);
 
 console.log("\n");
 smartPerf.print();
+
+smartPerf.clear();
+smartPerf.print();
+
