@@ -3,6 +3,7 @@
 #include <limits.h>
 
 #include <iostream>
+#include <stack>
 using namespace std;
 
 //struct Queue {
@@ -25,3 +26,12 @@ void queueDestroy(Queue *queue);
 
 void queuePrint(Queue *queue);
 
+class QueueCpp {
+    stack<int> input, output;
+public:
+
+    void push(int x);
+    void pop(void);
+    int peek(void);
+    bool empty(void);
+};
