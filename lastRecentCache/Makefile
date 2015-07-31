@@ -1,14 +1,10 @@
-files=  algorithm.cc algorithmV1.cc algorithmLinear.cc util.cc
+files=  algorithm.cc algorithmV1.cc algorithmLinear.cc algorithmUnordered_map.cc util.cc
 
 all:
-	g++ -g main.cc $(files) && ./a.out
+	g++ -g -std=c++0x main.cc $(files) && ./a.out
 
 test:
-	g++ -g tests.cc $(files) -lpthread -lgtest && ./a.out #--gtest_filter=normal*
-
-testCpp:
-	g++ -g testsCpp.cc $(files) -lpthread -lgtest && ./a.out #--gtest_filter=full*
-
+	g++ -g -std=c++0x tests.cc $(files) -lpthread -lgtest && ./a.out #--gtest_filter=normal*
 
 perf:
-	g++ -g perf.cc $(files) -lsmartPerf  && ./a.out
+	g++ -g -std=c++0x perf.cc $(files) -lsmartPerf  && ./a.out

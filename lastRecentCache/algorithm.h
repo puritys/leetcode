@@ -3,6 +3,7 @@
 #include <iostream>
 #include <deque>  
 #include <map>
+#include <unordered_map>
 #include <list>
 #include <string>
 #include <vector>
@@ -21,6 +22,19 @@ public:
     int get(int key);
     void set(int key, int value);
     void updateTime(map<int, pair<list<int>::iterator, int> >::iterator hashIt, int key);
+};
+
+class LRUCacheUnordered {
+private:
+    list<int> times;
+    unordered_map<int, pair<list<int>::iterator, int> > hash;
+    int capacity;
+    int length;
+public:
+    LRUCacheUnordered(int capacity);
+    int get(int key);
+    void set(int key, int value);
+    void updateTime(unordered_map<int, pair<list<int>::iterator, int> >::iterator hashIt, int key);
 };
 
 class LRUCacheV1 {

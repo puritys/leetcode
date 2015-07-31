@@ -30,6 +30,11 @@ int main() {
     run(CL3, max);
     smartPerf::end(true);
 
+    smartPerf::start("Two object, use unordered_map");
+    LRUCacheUnordered *CL4 = new LRUCacheUnordered(300);
+    run(CL4, max);
+    smartPerf::end(true);
+
     smartPerf::print();
 
 }

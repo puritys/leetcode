@@ -3,7 +3,8 @@
 |                  Key                  |                CPU(ms)                |
 +-------------------------------------------------------------------------------+
 |                 Linear                |                 570 ms                |
-|               Two object              |                 100 ms                |
-|  Two object with the iterator of list |                 80 ms                 |
+|               Two object              |                 110 ms                |
+|  Two object with the iterator of list |                 70 ms                 |
+|     Two object, use unordered_map     |                 50 ms                 |
 +-------------------------------------------------------------------------------+
 </pre>
