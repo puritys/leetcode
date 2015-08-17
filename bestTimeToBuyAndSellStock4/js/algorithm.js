@@ -29,17 +29,14 @@ var maxProfit = function(k, prices) {
         buyPrices[ki] = prices[0];
     }
 
-    for (i = 1; i < n; i++) {
-        profit[0][i] = 0;
-    }
+    for (i = 1; i < n; i++) profit[0][i] = 0;
 
     for (i = 1; i < n; i++) {
         for (ki = 1; ki <= k; ki++) {
-            if (!profit[ki - 1][i - 1]) profit[ki - 1][i - 1] = 0;
             profitAfterSell = minBuy[ki] + prices[i];
             if (profitAfterSell > profit[ki][i - 1]) {
                 profit[ki][i] = profitAfterSell;
-                sellPrices[ki] = prices[i];
+//                sellPrices[ki] = prices[i];
             } else {
                 // transation profit of last day
                 profit[ki][i] = profit[ki][i - 1];
@@ -48,7 +45,7 @@ var maxProfit = function(k, prices) {
             profitAfterBuy = profit[ki - 1][i - 1] - prices[i];
             if (profitAfterBuy > minBuy[ki]) {
                 minBuy[ki] = profitAfterBuy;
-                buyPrices[ki] = prices[i];
+//                buyPrices[ki] = prices[i];
             } 
         }
     }
