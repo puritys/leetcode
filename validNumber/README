@@ -1,0 +1,37 @@
+Valid Number
+============
+
+
+Question
+------------
+Validate if a given string is numeric.
+
+Some examples:
+"0" => true
+" 0.1 " => true
+"abc" => false
+"1 a" => false
+"2e10" => true
+
+Note: It is intended for the problem statement to be ambiguous. You should gather all requirements up front before implementing one.
+
+Update (2015-02-10):
+The signature of the C++ function had been updated. If you still see your function signature accepts a const char * argument, please click the reload button  to reset your code definition.
+
+Thinking
+--------
+
+* Remove space at the start and the end of string
+* Get the prefix letters from the string and only include the numbers and dot. If find a space inside the string then return false.
+* If can not get any space at the end then return true.
+
+pseudo code
+-----------
+* Remove the started space of string.
+* Remove the end space of string.
+* Get the prefix letters from the string.
+* 
+
+
+
+
