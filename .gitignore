@@ -4,6 +4,8 @@
 *.o
 *.so
 *.out
+*.class
+*tmp
 node_modules*
 *build/
 build/*
