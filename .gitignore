@@ -8,5 +8,5 @@
 *tmp
 node_modules*
 *build/
-build/*
-*/target/*
+build/**
+*target/**
