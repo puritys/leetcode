@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.dungeonGame.MainTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.046 sec <<< FAILURE!
+testFromCase(com.dungeonGame.MainTest)  Time elapsed: 0.026 sec  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at com.dungeonGame.MainTest.testFromCase(MainTest.java:66)
+
