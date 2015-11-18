@@ -4,8 +4,7 @@ import java.lang.*;
 public class Solution {
 
     public int calculateMinimumHP(int[][] dungeon) {
-        int minHP = 1;
-        int rows = 0, cols = 0, x, y;
+        int rows, cols, x, y;
         rows = dungeon.length - 1;
         cols = dungeon[0].length - 1;
         for (x = rows; x >= 0; x--) {
@@ -20,7 +19,6 @@ public class Solution {
                 if (dungeon[x][y] > 0) dungeon[x][y] = 0;
             }
         }
-        minHP = Math.abs(dungeon[0][0]) + 1;
-        return minHP;
+        return Math.abs(dungeon[0][0]) + 1;
     }
 }
