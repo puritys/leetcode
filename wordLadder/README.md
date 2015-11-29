@@ -25,6 +25,7 @@ idea
 ======
 
 Use shortest path algorithm to solve this question.
+
 1. Find every transformations and set the distance to be 1 between that two string.
 2. Use shortest path algorithm: BFS .
 
