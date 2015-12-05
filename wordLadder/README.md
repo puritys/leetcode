@@ -25,9 +25,11 @@ idea
 ======
 
 Use shortest path algorithm to solve this question.
+
 1. Find every transformations and set the distance to be 1 between that two string.
 2. Use shortest path algorithm: BFS .
 
+<pre>
  hit(1) -> hot(2)
  hot(2) -> dot(3)
         -> lot(3)
@@ -41,5 +43,5 @@ Use shortest path algorithm to solve this question.
  dog(4) -> log(5) 
         -> cog(5) Y
  log(5) -> cog(6) x
-
+</pre>
 
