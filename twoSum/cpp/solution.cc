@@ -1,19 +1,15 @@
 #include "solution.h"
 
-
 vector<int> Solution::twoSum(vector<int>& nums, int target) {
-    vector<int> ret;
     vector<int> copy;
-
+    int num1, num2;
     copy = nums;
     sort(copy.begin(), copy.end());
-    int num2;
-    int num1;
     for (auto n = copy.begin(); n != copy.end(); n++) {
-        int remain = target - *n;
-        auto found = find(copy.begin(), copy.end(), remain);
+        num2 = target - *n;
+        auto found = find(copy.begin(), copy.end(), num2);
         if (found != copy.end()) {
-            num1 = *n; num2 = remain;
+            num1 = *n; 
             break;
         }
     }
@@ -22,9 +18,7 @@ vector<int> Solution::twoSum(vector<int>& nums, int target) {
     int index2 = find(nums.begin(), nums.end(), num2) - nums.begin() + 1;
     if (index1 == index2) index2 = find(nums.begin() + index1, nums.end(), num2) - nums.begin() + 1;
     if (index1 > index2) swap(index1, index2);
-    ret.insert(ret.begin(), index2);
-    ret.insert(ret.begin(), index1);
-    return ret;
+    return {index1, index2};
 }
 
 
