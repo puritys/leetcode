@@ -23,12 +23,30 @@ void testCase(string filePath) {
     ASSERT_EQ(ans[1], ret[1]);
 }
 
+void testCaseTwoEnd(string filePath) {
+    vector<int> nums;
+    vector<int> ret;
+    vector<int> ans;
+    int target;
+
+    readFile(filePath, nums, target, ans);
+    SolutionTwoEnd *obj = new SolutionTwoEnd();
+    ret = obj->twoSum(nums, target);
+
+    ASSERT_EQ(ans[0], ret[0]);
+    ASSERT_EQ(ans[1], ret[1]);
+}
 TEST(testAll, success) {
     testCase("testData/case1");
     testCase("testData/case2");
     testCase("testData/case3");
     testCase("testData/case4");
+}
 
+TEST(testAllTwoEnd, success) {
+    testCaseTwoEnd("testData/case1");
+    testCaseTwoEnd("testData/case2");
+    testCaseTwoEnd("testData/case4");
 
 
 

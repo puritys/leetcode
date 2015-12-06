@@ -15,6 +15,14 @@ class SolutionSimple {
         vector<int> twoSum(vector<int>& nums, int target);
 };
 
+class SolutionTwoEnd {
+    public:
+        vector<int> twoSum(vector<int>& nums, int target);
+};
+
+
+
+
 
 
 

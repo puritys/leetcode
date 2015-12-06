@@ -1,4 +1,4 @@
-files = solution.cc solutionSimple.cc
+files = solution.cc solutionSimple.cc solutionTwoEnd.cc
 main:
 	g++ -g -std=c++0x main.cc $(files) && ./a.out
 

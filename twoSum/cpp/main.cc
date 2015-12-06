@@ -10,7 +10,9 @@ int main() {
 //    for (int i = 0; i < 5; i++)  nums.insert(nums.begin(), n[i]);
 
     readFile(filePath, nums, target, ans);
-    Solution *obj = new Solution();
+//    Solution *obj = new Solution();
+    SolutionTwoEnd *obj = new SolutionTwoEnd();
+
     ret = obj->twoSum(nums, target);
 
 
