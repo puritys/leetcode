@@ -21,6 +21,17 @@ TEST(normal2, success) {
     ASSERT_EQ(8, ret);
 }
 
+TEST(normal2_1, success) {
+    Solution *obj = new Solution();
+    int ret = obj->addDigits(9);
+    ASSERT_EQ(9, ret);
+}
+
+TEST(normal2_2, success) {
+    Solution *obj = new Solution();
+    int ret = obj->addDigits(99);
+    ASSERT_EQ(9, ret);
+}
 TEST(normal3, success) {
     Solution *obj = new Solution();
     int ret = obj->addDigits(4359);
