@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <deque>
 using namespace std;
 
 void print(vector<vector<char>> V);
